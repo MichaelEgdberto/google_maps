@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps/ui/pages/home/home_page.dart';
+import 'package:google_maps/app/ui/routes/pages.dart';
+import 'package:google_maps/app/ui/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: Routes.SPLASH,
+      routes: appRoutes(),
     );
   }
 }
